@@ -1,4 +1,4 @@
-FROM node:15-alpine
+FROM node:24-alpine
 
 COPY . /src
 
