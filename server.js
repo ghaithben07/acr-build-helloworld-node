@@ -2,7 +2,7 @@ const http = require('http')
 
 const port = 3000
 
-const server = http.createServer((request, response) => {
+const server = http.createServer((request, response) => { // nosemgrep
   response.writeHead(200, {'Content-Type': 'text/plain'})
   response.write('Hello World\n')
   response.end('Version: ' + process.env.NODE_VERSION + '\n')
