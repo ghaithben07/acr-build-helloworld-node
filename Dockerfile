@@ -1,11 +1,14 @@
 FROM node:24-alpine
 
-COPY . /src
+WORKDIR /src
 
-RUN cd /src && npm install
+COPY package*.json ./
+RUN npm install
+
+COPY . .
 
 EXPOSE 3000
 
 USER node
 
-CMD ["node", "/src/server.js"]
+CMD ["node", "server.js"]
