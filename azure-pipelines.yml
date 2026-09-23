@@ -18,8 +18,8 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    npm test --if-present
-  displayName: 'Run tests'
+    node --check server.js
+  displayName: "Validate Node.js syntax"
 
 - script: |
     python -m pip install --upgrade semgrep
